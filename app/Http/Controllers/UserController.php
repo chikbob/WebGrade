@@ -41,7 +41,7 @@ class UserController extends Controller
             return redirect('http://127.0.0.1:8000');
         } else {
             // Неверные учетные данные
-            return redirect('http://127.0.0.1:8000/login');
+            return redirect('http://127.0.0.1:8000/login')->with('error', 'Неверный логин или пароль');
         }
     }
 

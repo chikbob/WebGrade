@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\SiteController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -19,3 +20,13 @@ use Inertia\Inertia;
 
 Route::get('/', SiteController::class);
 Route::get('/search', [SearchController::class, 'search']);
+
+Route::get('register', fn() => Inertia::render('register',));
+Route::post('register/success', [UserController::class, 'register']);
+
+Route::group(['middleware' => 'web'], function () {
+    Route::get('login', fn() => Inertia::render('login'));
+    Route::post('login/success', [UserController::class, 'login']);
+    Route::post('logout', [UserController::class, 'logout']);
+    Route::get('logout', [UserController::class, 'logout']);
+});

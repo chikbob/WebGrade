@@ -12,12 +12,12 @@
         </div>
         <div v-if="modelSearch.search != undefined && modelSearch.search != 'none'">
             <div v-for="site in modelSearch.search">
-                {{site}}
+                {{ site }}
             </div>
         </div>
         <div v-else-if="modelSearch.search == undefined || modelSearch.search != 'none'">
             <div v-for="site in modelSite.site">
-                {{site}}
+                {{ site }}
             </div>
         </div>
         <div v-else>
@@ -28,13 +28,26 @@
                 {{ site }}
             </div>
         </div>
+
+        <div>
+            <div v-if="modelUser.user == null">
+                <Link href="/login">Логин</Link>
+                <br>
+                <Link href="/register">Регистрация</Link>
+            </div>
+            <div v-else>
+                <div>Приветствую, {{ modelUser.user.name }}</div>
+                <Link href="/logout">Выйти</Link>
+            </div>
+        </div>
     </div>
 </template>
 
 <script setup lang="ts">
 import {cnIndexScreen} from './index-screen.const'
-import {siteModel} from "../index-screen/index-screen.model"
+import {siteModel} from "./index-screen.model"
 import {searchModel} from "@/screens/search-screen/search-screen.model"
+import {userModel} from './user.model'
 import {ref} from 'vue';
 import {Inertia} from '@inertiajs/inertia'
 import {usePage} from '@inertiajs/inertia-vue3';
@@ -42,15 +55,18 @@ import {Link} from '@inertiajs/inertia-vue3'
 
 const modelSite = siteModel()
 const modelSearch = searchModel()
+const modelUser = userModel()
+
+console.log(modelUser.user)
+
 let searchValue = false;
 
 const searchQuery = ref('');
 
 const search = async () => {
-    if(searchQuery.value.length < 1) {
+    if (searchQuery.value.length < 1) {
 
-    }
-    else {
+    } else {
         searchValue = true;
         await Inertia.get('/search', {search: searchQuery.value});
     }
