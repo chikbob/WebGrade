@@ -14,7 +14,6 @@ const props = defineProps({
     sites: Object,
     search: Object,
 })
-console.log(props.search)
 
 const modelSite = siteModel()
 const modelSearch = searchModel()

@@ -10,13 +10,20 @@
                 </li>
             </ul>
         </div>
-        <div v-if="searchValue = modelSearch.search != null">
+        <div v-if="modelSearch.search != undefined && modelSearch.search != 'none'">
             <div v-for="site in modelSearch.search">
                 {{site}}
             </div>
         </div>
+        <div v-else-if="modelSearch.search == undefined || modelSearch.search != 'none'">
+            <div v-for="site in modelSite.site">
+                {{site}}
+            </div>
+        </div>
         <div v-else>
-            Сайт не найден!
+            <div v-if="modelSearch.search == 'none'">
+                Сайт не найден!
+            </div>
             <div v-for="site in modelSite.site">
                 {{ site }}
             </div>
@@ -40,8 +47,13 @@ let searchValue = false;
 const searchQuery = ref('');
 
 const search = async () => {
-    searchValue = true;
-    await Inertia.get('/search', {search: searchQuery.value});
+    if(searchQuery.value.length < 1) {
+
+    }
+    else {
+        searchValue = true;
+        await Inertia.get('/search', {search: searchQuery.value});
+    }
 };
 
 </script>

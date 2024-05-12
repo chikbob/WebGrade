@@ -21,8 +21,8 @@ class SearchController extends Controller
             ]);
         } else {
             return Inertia::render('index', [
-                'search' => null,
-                'sites' => Site::all()
+                'sites' => Site::all(),
+                'search' => 'none',
             ]);
         }
     }
