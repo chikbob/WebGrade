@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\SearchController;
+use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -15,4 +17,5 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', fn() => Inertia::render('index'));
+Route::get('/', SiteController::class);
+Route::get('/search', [SearchController::class, 'search']);

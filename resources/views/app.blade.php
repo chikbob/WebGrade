@@ -7,7 +7,7 @@
     <script src="https://unpkg.com/vue"></script>
     <script src="https://unpkg.com/vue@next/dist/vue.global.prod.js"></script>
     <link rel="icon" href="https://i.postimg.cc/rsM9msYZ/logo-gray.png" type="image/x-icon">
-    <link rel="stylesheet" href="../../public/sass/index.css">
+    <link rel="stylesheet" href="../sass/index.css">
     @vite('resources/js/app.js')
     @inertiaHead
 

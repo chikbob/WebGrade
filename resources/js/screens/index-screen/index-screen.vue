@@ -1,41 +1,51 @@
 <template>
     <div :class="cnIndexScreen('')">
-        Aboba
+        <a href="/search">search</a>
+        <div :class="cnIndexScreen('')">
+            <input type="text" v-model="searchQuery" placeholder="Введите запрос">
+            <button @click="search">Искать</button>
+            <ul>
+                <li v-for="site in searchResults" :key="site.id">
+                    {{ site.name }}
+                </li>
+            </ul>
+        </div>
+        <div v-if="searchValue = modelSearch.search != null">
+            <div v-for="site in modelSearch.search">
+                {{site}}
+            </div>
+        </div>
+        <div v-else>
+            Сайт не найден!
+            <div v-for="site in modelSite.site">
+                {{ site }}
+            </div>
+        </div>
     </div>
 </template>
 
 <script setup lang="ts">
 import {cnIndexScreen} from './index-screen.const'
+import {siteModel} from "../index-screen/index-screen.model"
+import {searchModel} from "@/screens/search-screen/search-screen.model"
+import {ref} from 'vue';
+import {Inertia} from '@inertiajs/inertia'
+import {usePage} from '@inertiajs/inertia-vue3';
+import {Link} from '@inertiajs/inertia-vue3'
+
+const modelSite = siteModel()
+const modelSearch = searchModel()
+let searchValue = false;
+
+const searchQuery = ref('');
+
+const search = async () => {
+    searchValue = true;
+    await Inertia.get('/search', {search: searchQuery.value});
+};
 
 </script>
 
 <style lang="scss" scoped>
-.modal {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9999;
-}
 
-.modal-content {
-    position: absolute;
-    width: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.close-button {
-    background-color: #ccc;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
 </style>
