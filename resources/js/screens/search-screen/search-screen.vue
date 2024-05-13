@@ -6,7 +6,6 @@
 import {cnSearchScreen} from './search-screen.const'
 import {siteModel} from "../index-screen/index-screen.model"
 
-
 const model = siteModel()
 
 

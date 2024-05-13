@@ -11,6 +11,8 @@ class Review extends Model
     use HasFactory;
 
     protected $fillable = [
+        'site_id',
+        'user_id',
         'grade',
         'text'
     ];

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\UserController;
@@ -30,3 +31,5 @@ Route::group(['middleware' => 'web'], function () {
     Route::post('logout', [UserController::class, 'logout']);
     Route::get('logout', [UserController::class, 'logout']);
 });
+
+Route::resource('review', SearchController::class);

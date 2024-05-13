@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Review;
 use App\Models\Site;
 use App\Models\User;
 use Illuminate\Database\Seeder;
@@ -22,6 +23,10 @@ class DatabaseSeeder extends Seeder
             'password' => 'aboba'
         ]);
 
+        User::factory(9)->create();
+
         Site::factory(10)->create();
+
+        Review::factory(10)->create();
     }
 }

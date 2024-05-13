@@ -14,8 +14,8 @@ return new class extends Migration {
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(Site::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
-            $table->foreignIdFor(User::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignIdFor(Site::class)->default(0)->constrained();
+            $table->foreignIdFor(User::class)->default(0)->constrained();
             $table->integer('grade');
             $table->text('text');
             $table->timestamps();

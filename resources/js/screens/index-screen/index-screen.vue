@@ -1,6 +1,5 @@
 <template>
     <div :class="cnIndexScreen('')">
-        <a href="/search">search</a>
         <div :class="cnIndexScreen('')">
             <input type="text" v-model="searchQuery" placeholder="Введите запрос">
             <button @click="search">Искать</button>
@@ -57,15 +56,12 @@ const modelSite = siteModel()
 const modelSearch = searchModel()
 const modelUser = userModel()
 
-console.log(modelUser.user)
-
 let searchValue = false;
 
 const searchQuery = ref('');
 
 const search = async () => {
     if (searchQuery.value.length < 1) {
-
     } else {
         searchValue = true;
         await Inertia.get('/search', {search: searchQuery.value});

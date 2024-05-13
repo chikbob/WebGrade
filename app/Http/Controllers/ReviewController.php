@@ -3,10 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Models\Review;
-use Illuminate\Http\Request;
+use App\Models\Site;
+use App\Models\User;
+use Illuminate\Support\Facades\Request;
+use Inertia\Inertia;
+use Inertia\Response;
 
 class ReviewController extends Controller
 {
+//    public function __invoke(Request $request): Response
+//    {
+//
+//    }
     /**
      * Display a listing of the resource.
      */
@@ -20,7 +28,7 @@ class ReviewController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
