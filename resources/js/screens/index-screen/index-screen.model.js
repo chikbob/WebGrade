@@ -13,4 +13,17 @@ class SiteModel extends BaseModel {
     }
 }
 
+class ReviewModel extends BaseModel {
+    constructor() {
+        super();
+        this.review = undefined;
+    }
+
+    init(review) {
+        this.review = review;
+    }
+}
+
+
 export const siteModel = useStore.bind(undefined, SiteModel);
+export const reviewModel = useStore.bind(undefined, ReviewModel);

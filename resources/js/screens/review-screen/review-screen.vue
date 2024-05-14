@@ -17,10 +17,33 @@
                         <div>
                             {{ review.grade }}
                         </div>
+                        <div>
+                            {{ formatDateTime(review.created_at) }}
+                        </div>
                         <br>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="rating-area">
+            <input type="radio" id="star-5" name="rating" value="5">
+            <label for="star-5" title="Оценка «5»"></label>
+            <input type="radio" id="star-4" name="rating" value="4">
+            <label for="star-4" title="Оценка «4»"></label>
+            <input type="radio" id="star-3" name="rating" value="3">
+            <label for="star-3" title="Оценка «3»"></label>
+            <input type="radio" id="star-2" name="rating" value="2">
+            <label for="star-2" title="Оценка «2»"></label>
+            <input type="radio" id="star-1" name="rating" value="1">
+            <label for="star-1" title="Оценка «1»"></label>
+        </div>
+        <br>
+        <div class="rating-result">
+            <span class="active"></span>
+            <span class="active"></span>
+            <span class="active"></span>
+            <span></span>
+            <span></span>
         </div>
         <form @submit.prevent="submit">
             <label for="grade">Grade:</label>
@@ -91,6 +114,20 @@ function submit() {
         return formData
     }
 }
+
+function formatDateTime(dateTimeString) {
+    const date = new Date(dateTimeString);
+    const day = date.getDate();
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear();
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+
+    const formattedDate = `${day < 10 ? '0' + day : day}.${month < 10 ? '0' + month : month}.${`${year}`.slice(2, 4)}`;
+    const formattedTime = `${hours < 10 ? '0' + hours : hours}:${minutes < 10 ? '0' + minutes : minutes}`;
+
+    return `${formattedDate} ${formattedTime}`;
+}
 </script>
 
 <style lang="scss" scoped>
@@ -121,5 +158,66 @@ function submit() {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.rating-area {
+    overflow: hidden;
+    width: 265px;
+    margin: 0 auto;
+}
+.rating-area:not(:checked) > input {
+    display: none;
+}
+.rating-area:not(:checked) > label {
+    float: right;
+    width: 42px;
+    padding: 0;
+    cursor: pointer;
+    font-size: 32px;
+    line-height: 32px;
+    color: lightgrey;
+    text-shadow: 1px 1px #bbb;
+}
+.rating-area:not(:checked) > label:before {
+    content: '★';
+}
+.rating-area > input:checked ~ label {
+    color: gold;
+    text-shadow: 1px 1px #c60;
+}
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+    color: gold;
+}
+.rating-area > input:checked + label:hover,
+.rating-area > input:checked + label:hover ~ label,
+.rating-area > input:checked ~ label:hover,
+.rating-area > input:checked ~ label:hover ~ label,
+.rating-area > label:hover ~ input:checked ~ label {
+    color: gold;
+    text-shadow: 1px 1px goldenrod;
+}
+.rate-area > label:active {
+    position: relative;
+}
+
+.rating-result {
+    width: 265px;
+    margin: 0 auto;
+}
+.rating-result span {
+    padding: 0;
+    font-size: 32px;
+    margin: 0 3px;
+    line-height: 1;
+    color: lightgrey;
+    text-shadow: 1px 1px #bbb;
+}
+.rating-result > span:before {
+    content: '★';
+}
+.rating-result > span.active {
+    color: gold;
+    text-shadow: 1px 1px #c60;
 }
 </style>

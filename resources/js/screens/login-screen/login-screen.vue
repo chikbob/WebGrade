@@ -32,7 +32,7 @@ let errorMessage = ref('');
 let showErrorMessage = ref(false);
 
 const isFormValid = computed(() => {
-    return form.value.email.length > 5 && form.value.password.length >= 5;
+    return form.value.email.length > 5 && form.value.password.length >= 6;
 });
 
 function loginUser() {

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Review;
 use App\Models\Site;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -15,7 +16,8 @@ class SiteController extends Controller
         $user = Auth::user();
         return Inertia::render('index', [
             'sites' => Site::all(),
-            'user' => $user
+            'user' => $user,
+            'review' => Review::all()
         ]);
     }
 }
