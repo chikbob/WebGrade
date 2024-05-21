@@ -19,14 +19,14 @@ class DatabaseSeeder extends Seeder
 
         User::factory()->create([
             'name' => 'Alex',
-            'email' => 'test@text.com',
-            'password' => '1234567890'
+            'email' => 'ricarrdo1488@gmail.com',
+            'password' => 'chikbob'
         ]);
 
-        User::factory(9)->create();
+        User::factory(119)->create();
 
-        Site::factory(10)->create();
+        Site::factory(550)->create();
 
-        Review::factory(10)->create();
+        Review::factory(250)->create();
     }
 }

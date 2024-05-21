@@ -20,4 +20,24 @@ class SiteController extends Controller
             'review' => Review::all()
         ]);
     }
+
+    public function login()
+    {
+        $user = Auth::user();
+        return Inertia::render('login', [
+            'sites' => Site::all(),
+            'user' => $user,
+            'review' => Review::all()
+        ]);
+    }
+
+    public function register()
+    {
+        $user = Auth::user();
+        return Inertia::render('register', [
+            'sites' => Site::all(),
+            'user' => $user,
+            'review' => Review::all()
+        ]);
+    }
 }

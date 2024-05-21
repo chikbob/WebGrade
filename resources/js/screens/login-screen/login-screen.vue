@@ -49,7 +49,7 @@ function showMessage() {
 function timeoutFunction() {
     return setTimeout(() => {
         showErrorMessage.value = true
-    }, 2000);
+    }, 3000);
 }
 </script>
 

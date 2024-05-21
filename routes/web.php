@@ -22,11 +22,11 @@ use Inertia\Inertia;
 Route::get('/', SiteController::class);
 Route::get('/search', [SearchController::class, 'search']);
 
-Route::get('register', fn() => Inertia::render('register',));
+Route::get('register', [SiteController::class, 'register']);
 Route::post('register/success', [UserController::class, 'register']);
 
 Route::group(['middleware' => 'web'], function () {
-    Route::get('login', fn() => Inertia::render('login'));
+    Route::get('login', [SiteController::class, 'login']);
     Route::post('login/success', [UserController::class, 'login']);
     Route::post('logout', [UserController::class, 'logout']);
     Route::get('logout', [UserController::class, 'logout']);

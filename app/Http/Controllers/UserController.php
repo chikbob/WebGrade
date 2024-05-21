@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Review;
+use App\Models\Site;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -26,7 +28,12 @@ class UserController extends Controller
             'password' => Hash::make($validatedData['password']),
         ]);
 
-        return redirect('http://127.0.0.1:8000/login');
+        return redirect('http://127.0.0.1:8000/login')->with([
+            'sites' => Site::all(),
+            'user' => $user,
+            'review' => Review::all(),
+            'all_users' => User::all()
+        ]);
     }
 
     public function login(Request $request)
@@ -50,7 +57,10 @@ class UserController extends Controller
         $user = Auth::user(); // Получаем текущего аутентифицированного пользователя
 
         return Inertia::render('index', [
-            'user' => $user
+            'user' => $user,
+            'sites' => Site::all(),
+            'review' => Review::all(),
+            'all_users' => User::all()
         ]);
     }
 
