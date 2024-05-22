@@ -84,7 +84,7 @@
 <script setup lang="ts">
 import {searchModel} from "@/screens/search-screen/search-screen.model"
 import {userModel} from "@/screens/index-screen/user.model"
-import {reviewModel} from "@/screens/review-screen/review-screen.model"
+import {reviewModel, allReviewModel} from "@/screens/review-screen/review-screen.model"
 import {allUserModel} from "@/screens/review-screen/all_user.model"
 import {Link} from "@inertiajs/inertia-vue3";
 import {Inertia} from '@inertiajs/inertia'
@@ -94,6 +94,7 @@ const modelSearch = searchModel()
 const modelUser = userModel()
 const modelReview = reviewModel()
 const modelAllUser = allUserModel()
+const modelAllReview = allReviewModel()
 
 let grade = ref()
 let text = ref('')

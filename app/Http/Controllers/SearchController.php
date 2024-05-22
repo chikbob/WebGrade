@@ -24,11 +24,13 @@ class SearchController extends Controller
                 'search' => $site,
                 'user' => $user,
                 'review' => $reviews,
-                'all_users' => User::all()
+                'all_users' => User::all(),
+                'site' => Site::all()
             ]);
         } else {
             return Inertia::render('index', [
                 'sites' => Site::all(),
+                'review' => Review::all(),
                 'search' => 'none',
                 'user' => $user
             ]);
@@ -56,7 +58,8 @@ class SearchController extends Controller
             'search' => $site,
             'user' => $user,
             'review' => $reviews,
-            'all_users' => User::all()
+            'all_users' => User::all(),
+            'all_review' => Review::all(),
         ]);
     }
 }

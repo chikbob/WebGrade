@@ -4,11 +4,9 @@
 
 <script setup lang="ts">
 import {cnSearchScreen} from './search-screen.const'
-import {siteModel} from "../index-screen/index-screen.model"
+import {allSiteModel} from "@/screens/review-screen/review-screen.model"
 
-const model = siteModel()
-
-
+const model = allSiteModel()
 </script>
 
 <style lang="scss" scoped>

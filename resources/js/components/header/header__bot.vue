@@ -27,12 +27,13 @@
 
 <script setup lang="ts">
 import {cnHeader} from "./header.const.js";
-import {siteModel, reviewModel} from "../../screens/index-screen/index-screen.model"
+import {allSiteModel} from "@/screens/review-screen/review-screen.model"
+import {reviewModel} from "../../screens/index-screen/index-screen.model"
 
-const modelSite = siteModel()
+const modelAllSite = allSiteModel()
 const modelReview = reviewModel()
 const amountReview = modelReview.review.slice(-1)
-const amountSite = modelSite.site.slice(-1)
+const amountSite = modelAllSite.site.slice(-1)
 </script>
 
 <style lang="scss" scoped>
