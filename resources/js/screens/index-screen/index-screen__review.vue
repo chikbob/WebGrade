@@ -28,10 +28,9 @@
 
 <script setup lang="ts">
 import {cnIndexScreen} from './index-screen.const'
-import {reviewModel} from "./index-screen.model"
-import {allSiteModel} from "@/screens/review-screen/review-screen.model"
+import {allSiteModel, allReviewModel} from "@/screens/review-screen/review-screen.model"
 
-const modelReview = reviewModel()
+const modelReview = allReviewModel()
 const modelAllSite = allSiteModel()
 
 const lastReview = modelReview.review.slice(-2)

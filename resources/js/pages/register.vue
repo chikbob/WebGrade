@@ -8,7 +8,7 @@
 import PageLayout from "@/components/layouts/page-layout/page-layout.vue";
 import RegisterScreen from "../screens/register-screen/register-screen.vue";
 import {reviewModel} from "@/screens/index-screen/index-screen.model"
-import {allSiteModel} from "@/screens/review-screen/review-screen.model"
+import {allSiteModel, allReviewModel} from "@/screens/review-screen/review-screen.model"
 import {userModel} from "@/screens/index-screen/user.model"
 
 const props = defineProps({
@@ -19,7 +19,7 @@ const props = defineProps({
 
 const modelAllSite = allSiteModel()
 const modelUser = userModel()
-const modelReview = reviewModel()
+const modelReview = allReviewModel()
 
 modelAllSite.init(props.sites)
 modelUser.init(props.user)

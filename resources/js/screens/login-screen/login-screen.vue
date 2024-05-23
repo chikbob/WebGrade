@@ -9,11 +9,11 @@
                     {{ showMessage() }}
                 </div>
                 <div :class="cnLoginScreen('login-form_input')">
-                    <input :class="cnLoginScreen('login-form_input_input')" type="email" v-model="form.email"
+                    <input :class="cnLoginScreen('login-form_input_input')" type="email" id="email" v-model="form.email"
                            placeholder="Логин" required>
                 </div>
                 <div :class="cnLoginScreen('login-form_input')">
-                    <input :class="cnLoginScreen('login-form_input_input')" type="password" placeholder="Пароль"
+                    <input :class="cnLoginScreen('login-form_input_input')" type="password" id="password" placeholder="Пароль"
                            v-model="form.password"
                            required>
                 </div>

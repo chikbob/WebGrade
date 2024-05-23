@@ -28,10 +28,11 @@
 <script setup lang="ts">
 import {cnHeader} from "./header.const.js";
 import {allSiteModel} from "@/screens/review-screen/review-screen.model"
-import {reviewModel} from "../../screens/index-screen/index-screen.model"
+import {allReviewModel} from "@/screens/review-screen/review-screen.model"
+
 
 const modelAllSite = allSiteModel()
-const modelReview = reviewModel()
+const modelReview = allReviewModel()
 const amountReview = modelReview.review.slice(-1)
 const amountSite = modelAllSite.site.slice(-1)
 </script>

@@ -24,6 +24,7 @@ class SearchController extends Controller
                 'search' => $site,
                 'user' => $user,
                 'review' => $reviews,
+                'all_review' => Review::all(),
                 'all_users' => User::all(),
                 'site' => Site::all()
             ]);
