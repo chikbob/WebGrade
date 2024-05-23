@@ -40,4 +40,34 @@ class SiteController extends Controller
             'review' => Review::all()
         ]);
     }
+
+    public function help()
+    {
+        $user = Auth::user();
+        return Inertia::render('help', [
+            'sites' => Site::all(),
+            'user' => $user,
+            'review' => Review::all()
+        ]);
+    }
+
+    public function about()
+    {
+        $user = Auth::user();
+        return Inertia::render('about', [
+            'sites' => Site::all(),
+            'user' => $user,
+            'review' => Review::all()
+        ]);
+    }
+
+    public function contacts()
+    {
+        $user = Auth::user();
+        return Inertia::render('contacts', [
+            'sites' => Site::all(),
+            'user' => $user,
+            'review' => Review::all()
+        ]);
+    }
 }

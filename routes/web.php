@@ -33,3 +33,7 @@ Route::group(['middleware' => 'web'], function () {
 });
 
 Route::resource('review', SearchController::class);
+
+Route::get('/help', [SiteController::class, 'help']);
+Route::get('/about', [SiteController::class, 'about']);
+Route::get('/contacts', [SiteController::class, 'contacts']);

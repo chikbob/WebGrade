@@ -1,13 +1,13 @@
 <template>
     <div :class="cnHeader('top')">
         <div :class="cnHeader('top-list')">
-            <Link href="" :class="cnHeader('top-list_link')">
+            <Link href="/help" :class="cnHeader('top-list_link')">
                 Помощь
             </Link>
-            <Link href="" :class="cnHeader('top-list_link')">
+            <Link href="/about" :class="cnHeader('top-list_link')">
                 О нас
             </Link>
-            <Link href="" :class="cnHeader('top-list_link')">
+            <Link href="/contacts" :class="cnHeader('top-list_link')">
                 Контакты
             </Link>
         </div>

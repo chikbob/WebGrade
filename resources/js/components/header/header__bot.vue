@@ -1,8 +1,8 @@
 <template>
     <div :class="cnHeader('bot')">
-        <a href="/">
+        <Link href="/">
             <img src="../../../../public/assets/logo.png" :class="cnHeader('bot-img')">
-        </a>
+        </Link>
         <div :class="cnHeader('bot-list')">
             <div :class="cnHeader('bot-list_sites')">
                 <div :class="cnHeader('bot-list_sites_number')">
@@ -21,7 +21,9 @@
                 </div>
             </div>
         </div>
-        <button :class="cnHeader('bot-button')" href="">Найти сайт</button>
+        <Link href="/">
+            <button :class="cnHeader('bot-button')">Найти сайт</button>
+        </Link>
     </div>
 </template>
 
@@ -29,7 +31,7 @@
 import {cnHeader} from "./header.const.js";
 import {allSiteModel} from "@/screens/review-screen/review-screen.model"
 import {allReviewModel} from "@/screens/review-screen/review-screen.model"
-
+import {Link} from '@inertiajs/inertia-vue3'
 
 const modelAllSite = allSiteModel()
 const modelReview = allReviewModel()
