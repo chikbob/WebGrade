@@ -9,13 +9,13 @@
             </div>
         </div>
         <div :class="cnFooter('top-list')">
-            <a href="/" :class="cnFooter('top-list_link')">
+            <a href="/help" :class="cnFooter('top-list_link')">
                 Помощь
             </a>
-            <a href="/" :class="cnFooter('top-list_link')">
+            <a href="/about" :class="cnFooter('top-list_link')">
                 О нас
             </a>
-            <a href="/" :class="cnFooter('top-list_link')">
+            <a href="/contacts" :class="cnFooter('top-list_link')">
                 Контакты
             </a>
         </div>

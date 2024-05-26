@@ -33,7 +33,7 @@ import {allSiteModel, allReviewModel} from "@/screens/review-screen/review-scree
 const modelReview = allReviewModel()
 const modelAllSite = allSiteModel()
 
-const lastReview = modelReview.review.slice(-2)
+const lastReview = modelReview.review.slice(-3)
 const amountReview = modelReview.review.slice(-1)
 const amountSite = modelAllSite.site.slice(-1)
 
@@ -54,6 +54,7 @@ const amountSite = modelAllSite.site.slice(-1)
             justify-content: space-between;
 
             &_card {
+                width: 450px;
                 height: 200px;
                 padding: 24px 60px 20px 55px;
 
@@ -96,7 +97,7 @@ const amountSite = modelAllSite.site.slice(-1)
                 }
 
                 &_description {
-                    width: 337.33px;
+                    width: 385px;
                     height: 79.13px;
 
                     color: rgb(105, 105, 105);
