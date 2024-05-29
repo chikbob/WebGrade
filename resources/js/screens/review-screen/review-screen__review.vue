@@ -4,7 +4,7 @@
             Отзывы на сайт <a :href='`https://${modelSearch.search.url}`'>{{ modelSearch.search.url }}</a>
         </div>
         <div v-if="modelReview.review.length == 0" :class="cnReviewScreen('review-list')">
-            <div :class="cnReviewScreen('review-list_item')">
+            <div :class="cnReviewScreen('review-list_null')">
                 Отзывов нет. Станьте первым!
             </div>
         </div>
@@ -155,6 +155,10 @@ function formatDateTime(dateTimeString) {
                         line-height: 27px;
                     }
                 }
+            }
+
+            &_null {
+                margin: 30px 0;
             }
         }
     }

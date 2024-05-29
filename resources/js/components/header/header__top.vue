@@ -28,7 +28,6 @@
                 Выйти
             </Link>
         </div>
-
     </div>
 </template>
 
