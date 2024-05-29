@@ -52,6 +52,24 @@ function registerUser() {
     try {
         showErrorMessage.value = false
         Inertia.post('/register/success', form.value)
+        let timerInterval;
+        Swal.fire({
+            title: "Создаем аккаунт",
+            html: "Подождите...",
+            timer: 2000,
+            timerProgressBar: true,
+            didOpen: () => {
+                Swal.showLoading();
+                const timer = Swal.getPopup().querySelector("b");
+                timerInterval = setInterval(() => {
+                    timer.textContent = `${Swal.getTimerLeft()}`;
+                }, 100);
+            },
+            willClose: () => {
+                clearInterval(timerInterval);
+            }
+        }).then((result) => {
+        });
     } catch (err) {
     }
 }
@@ -63,7 +81,7 @@ function showMessage() {
 function timeoutFunction() {
     return setTimeout(() => {
         showErrorMessage.value = true
-    }, 1000);
+    }, 2000);
 }
 </script>
 

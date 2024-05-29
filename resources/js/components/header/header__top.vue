@@ -45,7 +45,7 @@ let logout = ref(false)
 function exit() {
     let timerInterval;
     Swal.fire({
-        title: "Выходим из аккаунта",
+        title: "Подождите...",
         timer: 2000,
         timerProgressBar: true,
         didOpen: () => {

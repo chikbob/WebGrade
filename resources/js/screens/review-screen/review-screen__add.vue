@@ -16,7 +16,6 @@
                 <input v-model="grade" type="radio" id="star-1" name="rating" value="1">
                 <label for="star-1" title="Оценка «1»"></label>
             </div>
-            <!--                <input v-model="grade" type="number" min="1" max="5" required>-->
             <textarea :class="cnReviewScreen('add-review_text')" id="text" v-model="text" type="text"
                       placeholder="Описание" required>
                 </textarea>
@@ -28,9 +27,13 @@
 <script setup lang="ts">
 import {cnReviewScreen} from "./review-screen.const"
 import {searchModel} from "@/screens/search-screen/search-screen.model"
+import {userModel} from "../../screens/index-screen/user.model"
 import {ref} from "vue";
+import {Link} from '@inertiajs/inertia-vue3'
 import {Inertia} from "@inertiajs/inertia";
+
 const modelSearch = searchModel()
+const modelUser = userModel();
 
 let grade = ref()
 let text = ref('')
@@ -39,6 +42,11 @@ let regUser = ref<boolean>(false);
 function submit() {
     if (modelUser.user === null) {
         regUser.value = true;
+        Swal.fire({
+            icon: "error",
+            title: "Упс...",
+            text: "Войдите или зарегистрируйтесь"
+        });
     } else {
         const formData = {
             site_id: modelSearch.search.id,
@@ -48,6 +56,14 @@ function submit() {
             url: modelSearch.search.url,
         }
         Inertia.post('review', formData)
+        Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Ваш отзыв был добавлен!",
+            html: "Перезагрузите страницу",
+            showConfirmButton: false,
+            timer: 3000
+        });
         return formData
     }
 }
