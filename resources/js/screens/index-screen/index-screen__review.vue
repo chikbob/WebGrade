@@ -36,11 +36,96 @@ const modelAllSite = allSiteModel()
 const lastReview = modelReview.review.slice(-3)
 const amountReview = modelReview.review.slice(-1)
 const amountSite = modelAllSite.site.slice(-1)
-
 </script>
 
 <style lang="scss" scoped>
+@import "../../../../public/sass/media_mixin.scss";
+
 .index-screen {
+    @include _1700 {
+        &__review {
+            display: flex;
+            flex-direction: column !important;
+
+            padding: 0 !important;
+            margin: 0 0 35px !important;
+
+            &-list {
+                justify-content: center !important;
+
+                &_card {
+                    width: 450px;
+                    height: 200px;
+                    padding: 24px 60px 20px 55px;
+                    margin: 0 0 30px;
+
+                    &_header {
+                        margin: 0 0 25px;
+
+                        &_url {
+                            font-size: 24px;
+                            font-weight: 700;
+                            line-height: 44px;
+                        }
+
+                        &_grade {
+                            &_icon {
+                                width: 25px;
+                                height: 25px;
+                                font-size: 24px;
+                            }
+
+                            &_outside {
+
+                            }
+                        }
+                    }
+
+                    &_description {
+                        width: 100%;
+                        height: 79.13px;
+
+                        font-size: 16px;
+                        font-weight: 700;
+                        line-height: 22px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include _1570 {
+
+    }
+
+    @include _1250 {
+
+    }
+
+    @include _1170 {
+
+    }
+
+    @include _979 {
+
+    }
+
+    @include _768 {
+
+    }
+
+    @include _600 {
+
+    }
+
+    @include _480 {
+
+    }
+
+    @include _350 {
+
+    }
+
     &__review {
         display: flex;
         justify-content: space-between;
@@ -97,7 +182,7 @@ const amountSite = modelAllSite.site.slice(-1)
                 }
 
                 &_description {
-                    width: 385px;
+                    width: 100%;
                     height: 79.13px;
 
                     color: rgb(105, 105, 105);

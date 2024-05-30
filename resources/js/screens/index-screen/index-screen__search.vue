@@ -55,7 +55,159 @@ const search = async () => {
 </script>
 
 <style lang="scss" scoped>
+@import "../../../../public/sass/media_mixin.scss";
+
 .index-screen {
+    @include _1700 {
+
+    }
+
+    @include _1570 {
+        &__search {
+            margin: 65px 230px;
+            padding: 48px 0 137px !important;
+            height: 373px;
+
+            &-header {
+                width: 208px;
+                height: 44px;
+
+                font-size: 32px;
+                font-weight: 700;
+            }
+
+            &-site {
+
+                &_input {
+                    width: 350px;
+                    height: 50px;
+
+                    padding: 0 0 0 13px;
+                    margin: 0 34px 0 0;
+
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+
+                &_button {
+                    width: 150px;
+                    height: 50px;
+
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+
+    @include _1250 {
+
+    }
+
+    @include _1170 {
+        &__search {
+            justify-content: space-around !important;
+
+            margin: 65px auto !important;
+            padding: 48px 0 100px !important;
+            width: 650px !important;
+            height: 450px !important;
+
+            &-header {
+                width: 208px;
+                height: 44px;
+
+                font-size: 32px;
+                font-weight: 700;
+            }
+
+            &-site {
+                display: flex;
+                align-items: center !important;
+                flex-direction: column !important;
+
+                &_input {
+                    width: 350px;
+                    height: 50px;
+
+                    padding: 0 0 0 13px;
+                    margin: 0 0 15px !important;
+
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+
+                &_button {
+                    width: 150px;
+                    height: 50px;
+
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+
+    @include _979 {
+        &__search {
+            justify-content: space-around !important;
+
+            margin: 65px auto !important;
+            padding: 20px 0 60px !important;
+            width: 450px !important;
+            height: 350px !important;
+
+            &-header {
+                width: 208px;
+                height: 44px;
+
+                font-size: 32px;
+                font-weight: 700;
+            }
+
+            &-site {
+                display: flex;
+                align-items: center !important;
+                flex-direction: column !important;
+
+                &_input {
+                    width: 350px;
+                    height: 50px;
+
+                    padding: 0 0 0 13px;
+                    margin: 0 0 15px !important;
+
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+
+                &_button {
+                    width: 150px;
+                    height: 50px;
+
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+
+    @include _768 {
+
+    }
+
+    @include _600 {
+
+    }
+
+    @include _480 {
+
+    }
+
+    @include _350 {
+
+    }
+
     &__search {
         display: flex;
         flex-direction: column;
