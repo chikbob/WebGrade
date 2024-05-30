@@ -86,14 +86,114 @@ function timeoutFunction() {
 </script>
 
 <style lang="scss" scoped>
+@import "../../../../public/sass/media_mixin.scss";
+
 .register-screen {
+    @include _1170 {
+        &__register {
+            margin: 70px 100px 150px !important;
+        }
+    }
+
+    @include _979 {
+        &__register {
+            margin: 70px 50px 150px !important;
+        }
+    }
+
+    @include _768 {
+        &__register {
+            margin: 70px 30px 150px !important;
+        }
+    }
+
+    @include _600 {
+        &__register {
+            padding: 100px 0;
+            margin: 70px 30px 150px !important;
+
+            &-header {
+                margin: 0 0 40px;
+
+                font-size: 32px;
+                line-height: 44px;
+            }
+
+            &-form {
+                &_input {
+                    margin: 0 0 22px;
+
+                    &_input {
+                        width: 300px !important;
+                        height: 50px;
+
+                        font-size: .9rem !important;
+                        line-height: 22px;
+
+                        padding: 0 0 0 19px;
+                    }
+                }
+
+                &_submit {
+                    width: 180px !important;
+                    height: 40px !important;
+
+                    margin: 2rem 0 0 !important;
+
+                    font-size: .9rem !important;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+
+    @include _480 {
+        &__register {
+            padding: 60px 0 !important;
+            margin: 70px 30px 80px !important;
+
+            &-header {
+                margin: 0 0 40px;
+
+                font-size: 1.5rem !important;
+                line-height: 44px;
+            }
+
+            &-form {
+                &_input {
+                    margin: 0 0 22px;
+
+                    &_input {
+                        width: 220px !important;
+                        height: 50px;
+
+                        font-size: .8rem !important;
+                        line-height: 22px;
+
+                        padding: 0 0 0 19px;
+                    }
+                }
+
+                &_submit {
+                    width: 180px !important;
+                    height: 40px !important;
+
+                    margin: 1.2rem 0 0 !important;
+
+                    font-size: .9rem !important;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+
     &__register {
         display: flex;
         flex-direction: column;
         align-items: center;
 
         padding: 100px 0;
-        margin: 0 230px 150px;
+        margin: 70px 230px 150px;
 
         border-radius: 10px;
         background: rgb(255, 255, 255);
