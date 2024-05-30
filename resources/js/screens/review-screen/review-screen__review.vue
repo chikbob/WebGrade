@@ -145,7 +145,7 @@ function formatDateTime(dateTimeString) {
                         &_date {
                             font-size: 1rem !important;
                             font-weight: 400;
-                            line-height: 27px;
+                            line-height: 1.4rem !important;
 
                             margin: 0 0 0 auto;
                         }
@@ -153,7 +153,7 @@ function formatDateTime(dateTimeString) {
                         &_description {
                             font-size: 1.1rem !important;
                             font-weight: 400;
-                            line-height: 27px;
+                            line-height: 1.4rem !important;
                         }
                     }
                 }
@@ -221,7 +221,7 @@ function formatDateTime(dateTimeString) {
                             width: min-content;
                             font-size: 1.5rem !important;
                             font-weight: 700;
-                            line-height: 2rem !important;
+                            line-height: 1.4rem !important;
                         }
 
                         &_grade {
@@ -232,7 +232,7 @@ function formatDateTime(dateTimeString) {
                             margin: 0 0 0 1rem !important;
 
                             font-size: 1.5rem !important;
-                            line-height: 1rem !important;
+                            line-height: 1.4rem !important;
 
                             &_item {
                                 margin: 0 2px;
@@ -250,7 +250,7 @@ function formatDateTime(dateTimeString) {
                         &_date {
                             font-size: 1rem !important;
                             font-weight: 400;
-                            line-height: 27px;
+                            line-height: 1.4rem !important;
 
                             margin: 0 0 0 auto;
 
@@ -318,7 +318,7 @@ function formatDateTime(dateTimeString) {
                             width: min-content;
                             font-size: 1rem !important;
                             font-weight: 700;
-                            line-height: 2rem !important;
+                            line-height: 1.4rem !important;
                         }
 
                         &_grade {
@@ -329,7 +329,7 @@ function formatDateTime(dateTimeString) {
                             margin: 0 0 0 1rem !important;
 
                             font-size: 1rem !important;
-                            line-height: 1rem !important;
+                            line-height: 1.4rem !important;
 
                             &_item {
                                 margin: 0 2px;
@@ -347,7 +347,7 @@ function formatDateTime(dateTimeString) {
                         &_date {
                             font-size: .7rem !important;
                             font-weight: 400;
-                            line-height: 27px;
+                            line-height: 1.4rem !important;
 
                             margin: 0 0 0 auto;
 

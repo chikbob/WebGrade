@@ -79,7 +79,153 @@ const modelReview = allReviewModel()
 </script>
 
 <style lang="scss" scoped>
+@import "../../../../public/sass/media_mixin.scss";
+
 .help-screen {
+    @include _1700 {
+
+    }
+
+    @include _1570 {
+
+    }
+
+    @include _1250 {
+
+    }
+
+    @include _1170 {
+        &__card {
+            margin: 74px 100px 64px !important;
+            padding: 30px 52px 48px 60px;
+
+            &-header {
+                font-size: 32px;
+                line-height: 44px;
+
+                margin: 0 0 44px;
+            }
+
+            &-list {
+                &_item {
+
+                    &_label {
+                        font-size: 28px;
+                        line-height: 38px;
+                    }
+
+                    &_description {
+                        font-size: 24px;
+                        line-height: 33px;
+
+                        margin: 20px 0 44px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include _979 {
+        &__card {
+            margin: 74px 50px 64px !important;
+            padding: 30px 52px 48px 60px;
+
+            &-header {
+                font-size: 32px;
+                line-height: 44px;
+
+                margin: 0 0 44px;
+            }
+
+            &-list {
+                &_item {
+
+                    &_label {
+                        font-size: 28px;
+                        line-height: 38px;
+                    }
+
+                    &_description {
+                        font-size: 24px;
+                        line-height: 33px;
+
+                        margin: 20px 0 44px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include _768 {
+        &__card {
+            margin: 74px 30px 64px !important;
+            padding: 30px 52px 48px 60px;
+
+            &-header {
+                font-size: 32px;
+                line-height: 44px;
+
+                margin: 0 0 44px;
+            }
+
+            &-list {
+                &_item {
+
+                    &_label {
+                        font-size: 28px;
+                        line-height: 38px;
+                    }
+
+                    &_description {
+                        font-size: 24px;
+                        line-height: 33px;
+
+                        margin: 20px 0 44px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include _600 {
+
+    }
+
+    @include _480 {
+        &__card {
+            margin: 74px 30px 64px !important;
+            padding: 30px 52px 48px 60px;
+
+            &-header {
+                font-size: 1.8rem !important;
+                line-height: 2rem !important;
+
+                margin: 0 0 44px;
+            }
+
+            &-list {
+                &_item {
+
+                    &_label {
+                        font-size: 1.5rem !important;
+                        line-height: 1.4rem !important;
+                    }
+
+                    &_description {
+                        font-size: 1.2rem !important;
+                        line-height: 1.4rem !important;
+
+                        margin: 20px 0 44px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include _350 {
+
+    }
+
     &__card {
         margin: 74px 230px 64px;
         padding: 30px 52px 48px 60px;

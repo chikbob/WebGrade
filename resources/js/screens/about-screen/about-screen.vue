@@ -50,15 +50,60 @@ const modelReview = allReviewModel()
     }
 
     @include _1170 {
+        &__card {
+            margin: 74px 100px 64px !important;
+            padding: 30px 52px 55px 60px;
 
+            &-header {
+                font-size: 32px;
+                line-height: 44px;
+
+                margin: 0 0 44px;
+            }
+
+            &-text {
+                font-size: 20px;
+                line-height: 27px;
+            }
+        }
     }
 
     @include _979 {
+        &__card {
+            margin: 74px 50px 64px !important;
+            padding: 30px 52px 55px 60px;
 
+            &-header {
+                font-size: 32px;
+                line-height: 44px;
+
+                margin: 0 0 44px;
+            }
+
+            &-text {
+                font-size: 20px;
+                line-height: 27px;
+            }
+        }
     }
 
     @include _768 {
+        &__card {
+            margin: 74px 30px 64px !important;
+            padding: 30px 52px 55px 60px;
 
+            &-header {
+                font-size: 32px;
+                line-height: 44px;
+
+                margin: 0 0 44px;
+            }
+
+            &-text {
+                font-size: 20px;
+                line-height: 27px;
+            }
+        }
     }
 
     @include _600 {
@@ -66,7 +111,22 @@ const modelReview = allReviewModel()
     }
 
     @include _480 {
+        &__card {
+            margin: 74px 30px 64px !important;
+            padding: 55px 40px 55px 45px !important;
 
+            &-header {
+                font-size: 1.8rem !important;
+                line-height: 1.8rem !important;
+
+                margin: 0 0 44px;
+            }
+
+            &-text {
+                font-size: 1rem !important;
+                line-height: 1.4rem !important;
+            }
+        }
     }
 
     @include _350 {

@@ -47,7 +47,181 @@ const modelReview = allReviewModel()
 </script>
 
 <style lang="scss" scoped>
+@import "../../../../public/sass/media_mixin.scss";
+
 .contacts-screen {
+    @include _1700 {
+
+    }
+
+    @include _1570 {
+
+    }
+
+    @include _1250 {
+        &__card {
+            margin: 74px 100px 64px !important;
+            padding: 30px 52px 55px 60px;
+
+            border-radius: 10px;
+            background: rgb(255, 255, 255);
+
+            &-header {
+                color: rgb(191, 114, 25);
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 44px;
+
+                margin: 0 0 44px;
+            }
+
+            &-list {
+
+                &_item {
+                    display: flex;
+                    margin: 0 0 20px;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+
+                    &_label {
+                        width: 189px;
+
+                        color: rgb(191, 114, 25);
+                        font-size: 24px;
+                        font-weight: 700;
+                        line-height: 33px;
+
+                        margin: 0 48px 0 0;
+                    }
+
+                    &_text {
+                        color: rgb(51, 51, 51);
+                        font-size: 24px;
+                        font-weight: 700;
+                        line-height: 33px;
+                    }
+
+                    &_map {
+                        width: 400px !important;
+                        height: 250px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    @include _1170 {
+
+    }
+
+    @include _979 {
+        &__card {
+            margin: 74px 30px 64px !important;
+            padding: 30px 52px 55px 60px;
+
+            &-header {
+                font-size: 32px;
+                line-height: 44px;
+
+                margin: 0 0 44px;
+            }
+
+            &-list {
+
+                &_item {
+                    display: flex;
+                    flex-direction: column;
+
+                    margin: 0 0 20px;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+
+                    &_label {
+                        width: 189px;
+
+                        font-size: 24px;
+                        line-height: 33px;
+
+                        margin: 0 48px 0 0;
+                    }
+
+                    &_text {
+                        font-size: 24px;
+                        line-height: 33px;
+                    }
+
+                    &_map {
+                        width: 100% !important;
+                        height: 200px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    @include _768 {
+
+    }
+
+    @include _600 {
+
+    }
+
+    @include _480 {
+        &__card {
+            margin: 74px 30px 64px !important;
+            padding: 55px 52px 55px 60px !important;
+
+            &-header {
+                font-size: 1.8rem !important;
+                line-height: 1.8rem !important;
+
+                margin: 0 0 44px;
+            }
+
+            &-list {
+
+                &_item {
+                    display: flex;
+                    flex-direction: column;
+
+                    margin: 0 0 20px;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+
+                    &_label {
+                        width: 189px;
+
+                        font-size: 1.4rem !important;
+                        line-height: 2rem !important;
+
+                        margin: 0 48px 0 0;
+                    }
+
+                    &_text {
+                        font-size: 1.2rem !important;
+                        line-height: 1.2rem !important;
+                    }
+
+                    &_map {
+                        width: 100% !important;
+                        height: 200px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    @include _350 {
+
+    }
+
     &__card {
         margin: 74px 230px 64px;
         padding: 30px 52px 55px 60px;
@@ -93,7 +267,8 @@ const modelReview = allReviewModel()
                 }
 
                 &_map {
-
+                    width: 450px;
+                    height: 250px;
                 }
             }
         }

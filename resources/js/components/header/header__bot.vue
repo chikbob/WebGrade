@@ -48,7 +48,58 @@ const amountSite = modelAllSite.site.slice(-1)
     }
 
     @include _1570 {
+        &__bot {
+            height: 70px;
 
+            &-list {
+                display: flex;
+
+                &_sites {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    &:first-child {
+                        margin: 0 60px 0 0 !important;
+                    }
+
+                    &_number {
+                        display: flex;
+                        align-items: center;
+
+                        width: 100px;
+                        height: 32px;
+
+                        font-size: 32px;
+                    }
+
+                    &_text {
+                        display: flex;
+                        align-items: center;
+
+                        width: 68px;
+                        height: 15px;
+
+                        font-size: 14px;
+                    }
+
+                }
+            }
+
+            &-img {
+                width: 193px;
+                height: 59px;
+            }
+
+            &-button {
+                width: 130px;
+                height: 40px;
+
+                margin: 0 40px 0 0;
+
+                font-size: 14px;
+            }
+        }
     }
 
     @include _1250 {
@@ -56,11 +107,113 @@ const amountSite = modelAllSite.site.slice(-1)
     }
 
     @include _1170 {
+        &__bot {
+            height: 70px;
 
+            &-list {
+                display: flex;
+
+                &_sites {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    &:first-child {
+                        margin: 0 60px 0 0 !important;
+                    }
+
+                    &_number {
+                        display: flex;
+                        align-items: center;
+
+                        width: 100px;
+                        height: 32px;
+
+                        font-size: 32px;
+                    }
+
+                    &_text {
+                        display: flex;
+                        align-items: center;
+
+                        width: 68px;
+                        height: 15px;
+
+                        font-size: 14px;
+                    }
+
+                }
+            }
+
+            &-img {
+                width: 193px;
+                height: 59px;
+            }
+
+            &-button {
+                width: 130px;
+                height: 40px;
+
+                margin: 0 40px 0 0;
+
+                font-size: 14px;
+            }
+        }
     }
 
     @include _979 {
+        &__bot {
+            height: 70px;
 
+            &-list {
+                display: flex;
+
+                &_sites {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    &:first-child {
+                        margin: 0 !important;
+                    }
+
+                    &_number {
+                        display: flex;
+                        align-items: center;
+
+                        width: 100px;
+                        height: 32px;
+
+                        font-size: 32px;
+                    }
+
+                    &_text {
+                        display: flex;
+                        align-items: center;
+
+                        width: 68px;
+                        height: 15px;
+
+                        font-size: 14px;
+                    }
+
+                }
+            }
+
+            &-img {
+                width: 193px;
+                height: 59px;
+            }
+
+            &-button {
+                width: 130px;
+                height: 40px;
+
+                margin: 0 40px 0 0;
+
+                font-size: 14px;
+            }
+        }
     }
 
     @include _768 {
