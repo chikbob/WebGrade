@@ -70,7 +70,310 @@ function submit() {
 </script>
 
 <style lang="scss" scoped>
+@import "../../../../public/sass/media_mixin.scss";
+
 .review-screen {
+    @include _1700 {
+
+    }
+
+    @include _1570 {
+
+    }
+
+    @include _1250 {
+
+    }
+
+    @include _1170 {
+        &__add {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 36px 50px 29px;
+            margin: 0 100px 60px !important;
+
+            border-radius: 10px;
+
+            &-header {
+                font-size: 32px;
+                line-height: 44px;
+            }
+
+            &-review {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                &_grade {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: flex-end;
+
+                    margin: 37px 0;
+                }
+
+                &_text {
+                    width: 100%;
+                    height: 131px;
+
+                    font-size: 16px;
+                    line-height: 22px;
+
+                    padding: 15px 15px 12px 12px;
+                    margin: 0 0 15px;
+                }
+
+                &_submit {
+                    width: 200px;
+                    height: 50px;
+
+                    font-size: 16px;
+                    line-height: 22px;
+                    margin: 30px auto 0;
+                }
+            }
+        }
+    }
+
+    @include _979 {
+        &__add {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 36px 50px 29px;
+            margin: 0 50px 60px !important;
+
+            border-radius: 10px;
+
+            &-header {
+                font-size: 32px;
+                line-height: 44px;
+            }
+
+            &-review {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                &_grade {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: flex-end;
+
+                    margin: 37px 0;
+                }
+
+                &_text {
+                    width: 100%;
+                    height: 131px;
+
+                    font-size: 16px;
+                    line-height: 22px;
+
+                    padding: 15px 15px 12px 12px;
+                    margin: 0 0 15px;
+                }
+
+                &_submit {
+                    width: 200px;
+                    height: 50px;
+
+                    font-size: 16px;
+                    line-height: 22px;
+                    margin: 30px auto 0;
+                }
+            }
+        }
+    }
+
+    @include _768 {
+        &__add {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 36px 50px 29px;
+            margin: 0 30px 60px !important;
+
+            border-radius: 10px;
+
+            &-header {
+                font-size: 32px;
+                line-height: 44px;
+            }
+
+            &-review {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                &_grade {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: flex-end;
+
+                    margin: 37px 0;
+                }
+
+                &_text {
+                    width: 100%;
+                    height: 131px;
+
+                    font-size: 16px;
+                    line-height: 22px;
+
+                    padding: 15px 15px 12px 12px;
+                    margin: 0 0 15px;
+                }
+
+                &_submit {
+                    width: 200px;
+                    height: 50px;
+
+                    font-size: 16px;
+                    line-height: 22px;
+                    margin: 30px auto 0;
+                }
+            }
+        }
+    }
+
+    @include _600 {
+
+    }
+
+    @include _480 {
+        .rating-area {
+            overflow: hidden;
+            width: auto !important;
+        }
+
+        .rating-area:not(:checked) > label {
+            float: right;
+            width: 2rem !important;
+
+            padding: 0;
+            cursor: pointer;
+            font-size: 2rem !important;
+            line-height: 2rem !important;
+        }
+
+        &__add {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 36px 50px 29px;
+            margin: 0 30px 60px !important;
+
+            border-radius: 10px;
+
+            &-header {
+                font-size: 1.5rem !important;
+                line-height: 1.8rem !important;
+            }
+
+            &-review {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                &_grade {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: flex-end;
+
+                    margin: 37px 0;
+                }
+
+                &_text {
+                    width: 100%;
+                    height: 100px !important;
+
+                    font-size: 16px;
+                    line-height: 22px;
+
+                    padding: 15px 15px 12px 12px;
+                    margin: 0 0 15px;
+                }
+
+                &_submit {
+                    width: 170px !important;
+                    height: 40px !important;
+
+                    font-size: .8rem !important;
+                    line-height: 22px;
+                    margin: 20px auto 0 !important;
+                }
+            }
+        }
+    }
+
+    @include _350 {
+        .rating-area:not(:checked) > label {
+            float: right;
+            width: 2rem !important;
+
+            padding: 0;
+            cursor: pointer;
+            font-size: 2rem !important;
+            line-height: 2rem !important;
+        }
+
+        &__add {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 36px 50px 29px;
+            margin: 0 30px 60px !important;
+
+            border-radius: 10px;
+
+            &-header {
+                font-size: 1.5rem !important;
+                line-height: 1.8rem !important;
+            }
+
+            &-review {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                &_grade {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: flex-end;
+
+                    margin: 37px 0;
+                }
+
+                &_text {
+                    width: 100%;
+                    height: 100px !important;
+
+                    font-size: 16px;
+                    line-height: 22px;
+
+                    padding: 15px 15px 12px 12px;
+                    margin: 0 0 15px;
+                }
+
+                &_submit {
+                    width: 170px !important;
+                    height: 40px !important;
+
+                    font-size: .8rem !important;
+                    line-height: 22px;
+                    margin: 20px auto 0 !important;
+                }
+            }
+        }
+    }
+
     &__add {
         display: flex;
         flex-direction: column;

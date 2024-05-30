@@ -34,7 +34,45 @@ const modelReview = allReviewModel()
 </script>
 
 <style lang="scss" scoped>
+@import "../../../../public/sass/media_mixin.scss";
+
 .about-screen {
+    @include _1700 {
+
+    }
+
+    @include _1570 {
+
+    }
+
+    @include _1250 {
+
+    }
+
+    @include _1170 {
+
+    }
+
+    @include _979 {
+
+    }
+
+    @include _768 {
+
+    }
+
+    @include _600 {
+
+    }
+
+    @include _480 {
+
+    }
+
+    @include _350 {
+
+    }
+
     &__card {
         margin: 74px 230px 64px;
         padding: 30px 52px 55px 60px;

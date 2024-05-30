@@ -64,7 +64,315 @@ function formatDateTime(dateTimeString) {
 </script>
 
 <style lang="scss" scoped>
+@import "../../../../public/sass/media_mixin.scss";
+
 .review-screen {
+    @include _1700 {
+
+    }
+
+    @include _1570 {
+
+    }
+
+    @include _1250 {
+        &__review {
+            padding: 35px 40px 35px 50px;
+            margin: 70px 230px 60px !important;
+
+            &-header {
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 44px;
+
+                margin: 0 0 60px;
+
+                & a {
+                    font-size: 32px;
+                    font-weight: 700;
+                    line-height: 44px;
+                }
+            }
+
+            &-list {
+
+                &_item {
+                    margin: 30px 0;
+
+                    &:first-child {
+                        margin: 0 0 30px;
+                    }
+
+                    &:last-child {
+                        margin: 30px 0 0;
+                    }
+
+                    &_top {
+                        display: flex;
+                        align-items: center;
+
+                        margin: 0 0 20px;
+
+                        &_name {
+                            font-size: 1.5rem !important;
+                            font-weight: 700;
+                            line-height: 44px;
+                        }
+
+                        &_grade {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            margin: 0 0 0 1rem !important;
+
+                            font-size: 2rem !important;
+                            line-height: 46px;
+
+                            &_item {
+                                margin: 0 2px;
+
+                                &:first-child {
+                                    margin: 0 2px 0 0;
+                                }
+
+                                &:last-child {
+                                    margin: 0 0 0 2px;
+                                }
+                            }
+                        }
+
+                        &_date {
+                            font-size: 1rem !important;
+                            font-weight: 400;
+                            line-height: 27px;
+
+                            margin: 0 0 0 auto;
+                        }
+
+                        &_description {
+                            font-size: 1.1rem !important;
+                            font-weight: 400;
+                            line-height: 27px;
+                        }
+                    }
+                }
+
+                &_null {
+                    margin: 30px 0;
+                }
+            }
+        }
+    }
+
+    @include _1170 {
+        &__review {
+            padding: 35px 40px 35px 50px;
+            margin: 70px 100px 60px !important;
+        }
+    }
+
+    @include _979 {
+        &__review {
+            padding: 35px 40px 35px 50px;
+            margin: 70px 50px 60px !important;
+        }
+    }
+
+    @include _768 {
+        &__review {
+            padding: 35px 40px 35px 50px;
+            margin: 70px 30px 60px !important;
+
+            &-header {
+                font-size: 1.5rem !important;
+                font-weight: 700;
+                line-height: 1.5rem !important;
+
+                margin: 0 0 60px;
+
+                & a {
+                    font-size: 1.5rem !important;
+                    font-weight: 700;
+                    line-height: 1.5rem !important;
+                }
+            }
+
+            &-list {
+
+                &_item {
+                    margin: 30px 0;
+
+                    &:first-child {
+                        margin: 0 0 30px;
+                    }
+
+                    &:last-child {
+                        margin: 30px 0 0;
+                    }
+
+                    &_top {
+                        display: flex;
+                        align-items: center;
+
+                        margin: 0 0 20px;
+
+                        &_name {
+                            width: min-content;
+                            font-size: 1.5rem !important;
+                            font-weight: 700;
+                            line-height: 2rem !important;
+                        }
+
+                        &_grade {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            margin: 0 0 0 1rem !important;
+
+                            font-size: 1.5rem !important;
+                            line-height: 1rem !important;
+
+                            &_item {
+                                margin: 0 2px;
+
+                                &:first-child {
+                                    margin: 0 2px 0 0;
+                                }
+
+                                &:last-child {
+                                    margin: 0 0 0 2px;
+                                }
+                            }
+                        }
+
+                        &_date {
+                            font-size: 1rem !important;
+                            font-weight: 400;
+                            line-height: 27px;
+
+                            margin: 0 0 0 auto;
+
+                            text-align: end;
+                        }
+
+                        &_description {
+                            font-size: 1.1rem !important;
+                            font-weight: 400;
+                            line-height: 27px;
+                        }
+                    }
+                }
+
+                &_null {
+                    margin: 30px 0;
+                }
+            }
+        }
+    }
+
+    @include _600 {
+
+    }
+
+    @include _480 {
+        &__review {
+            padding: 35px 40px 35px 50px;
+            margin: 70px 30px 60px !important;
+
+            &-header {
+                font-size: 1.5rem !important;
+                font-weight: 700;
+                line-height: 1.5rem !important;
+
+                margin: 0 0 60px;
+
+                & a {
+                    font-size: 1.5rem !important;
+                    font-weight: 700;
+                    line-height: 1.5rem !important;
+                }
+            }
+
+            &-list {
+
+                &_item {
+                    margin: 30px 0;
+
+                    &:first-child {
+                        margin: 0 0 30px;
+                    }
+
+                    &:last-child {
+                        margin: 30px 0 0;
+                    }
+
+                    &_top {
+                        display: flex;
+                        align-items: center;
+
+                        margin: 0 0 20px;
+
+                        &_name {
+                            width: min-content;
+                            font-size: 1rem !important;
+                            font-weight: 700;
+                            line-height: 2rem !important;
+                        }
+
+                        &_grade {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            margin: 0 0 0 1rem !important;
+
+                            font-size: 1rem !important;
+                            line-height: 1rem !important;
+
+                            &_item {
+                                margin: 0 2px;
+
+                                &:first-child {
+                                    margin: 0 2px 0 0;
+                                }
+
+                                &:last-child {
+                                    margin: 0 0 0 2px;
+                                }
+                            }
+                        }
+
+                        &_date {
+                            font-size: .7rem !important;
+                            font-weight: 400;
+                            line-height: 27px;
+
+                            margin: 0 0 0 auto;
+
+                            text-align: end;
+                        }
+
+                        &_description {
+                            font-size: 1rem !important;
+                            font-weight: 400;
+                            line-height: 27px;
+                        }
+                    }
+                }
+
+                &_null {
+                    margin: 30px 0;
+                }
+            }
+        }
+    }
+
+    @include _350 {
+
+    }
+
     &__review {
         padding: 35px 40px 35px 50px;
         margin: 70px 230px 60px;

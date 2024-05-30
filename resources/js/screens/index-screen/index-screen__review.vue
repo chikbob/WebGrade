@@ -45,7 +45,7 @@ const amountSite = modelAllSite.site.slice(-1)
     @include _1700 {
         &__review {
             display: flex;
-            flex-direction: column !important;
+            flex-direction: column-reverse !important;
 
             padding: 0 !important;
             margin: 0 0 35px !important;
