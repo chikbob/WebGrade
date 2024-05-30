@@ -171,11 +171,11 @@ const search = async () => {
                 flex-direction: column !important;
 
                 &_input {
-                    width: 350px;
+                    width: 300px !important;
                     height: 50px;
 
                     padding: 0 0 0 13px;
-                    margin: 0 0 15px !important;
+                    margin: 0 0 25px !important;
 
                     font-size: 16px;
                     line-height: 22px;
@@ -201,7 +201,47 @@ const search = async () => {
     }
 
     @include _480 {
+        &__search {
+            justify-content: space-around !important;
 
+            margin: 65px auto !important;
+            padding: 20px 0 20px !important;
+            width: 300px !important;
+            height: 225px !important;
+
+            &-header {
+                width: 208px;
+                height: 44px;
+
+                font-size: 1.4rem !important;
+                font-weight: 700;
+            }
+
+            &-site {
+                display: flex;
+                align-items: center !important;
+                flex-direction: column !important;
+
+                &_input {
+                    width: 200px !important;
+                    height: 30px !important;
+
+                    padding: 0 0 0 13px;
+                    margin: 0 0 25px !important;
+
+                    font-size: .7rem !important;
+                    line-height: 22px;
+                }
+
+                &_button {
+                    width: 100px !important;
+                    height: 40px !important;
+
+                    font-size: .9rem !important;
+                    line-height: 22px;
+                }
+            }
+        }
     }
 
     @include _350 {
@@ -229,6 +269,7 @@ const search = async () => {
             color: rgb(191, 114, 25);
             font-size: 32px;
             font-weight: 700;
+            text-align: center;
 
             &_error {
                 color: rgb(213, 51, 51);

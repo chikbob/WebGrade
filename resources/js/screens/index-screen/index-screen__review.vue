@@ -119,7 +119,55 @@ const amountSite = modelAllSite.site.slice(-1)
     }
 
     @include _480 {
+        &__review {
+            display: flex;
+            flex-direction: column-reverse !important;
 
+            padding: 0 !important;
+            margin: 0 0 35px !important;
+
+            &-list {
+                justify-content: center !important;
+
+                &_card {
+                    width: 300px !important;
+                    height: 150px !important;
+                    padding: 10px 30px 20px 30px !important;
+                    margin: 0 0 30px;
+
+                    &_header {
+                        margin: 0 0 25px;
+
+                        &_url {
+                            font-size: 1.2rem !important;
+                            font-weight: 700;
+                            line-height: 44px;
+                        }
+
+                        &_grade {
+                            &_icon {
+                                width: auto !important;
+                                height: auto !important;
+                                font-size: 1.2rem !important;
+                            }
+
+                            &_outside {
+
+                            }
+                        }
+                    }
+
+                    &_description {
+                        width: 100%;
+                        height: auto !important;
+
+                        font-size: .8rem !important;
+                        font-weight: 700;
+                        line-height: .8rem !important;
+                    }
+                }
+            }
+        }
     }
 
     @include _350 {

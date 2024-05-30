@@ -9,7 +9,7 @@
                     {{ amountSite[0].id }}
                 </div>
                 <div :class="cnHeader('bot-list_sites_text')">
-                    сайтов
+                    сайт(ов)
                 </div>
             </div>
             <div :class="cnHeader('bot-list_sites')">
@@ -17,7 +17,7 @@
                     {{ amountReview[0].id }}
                 </div>
                 <div :class="cnHeader('bot-list_sites_text')">
-                    отзывов
+                    отзыв(ов)
                 </div>
             </div>
         </div>
@@ -40,7 +40,109 @@ const amountSite = modelAllSite.site.slice(-1)
 </script>
 
 <style lang="scss" scoped>
+@import "../../../../public/sass/media_mixin.scss";
+
 .header {
+    @include _1700 {
+
+    }
+
+    @include _1570 {
+
+    }
+
+    @include _1250 {
+
+    }
+
+    @include _1170 {
+
+    }
+
+    @include _979 {
+
+    }
+
+    @include _768 {
+        &__bot {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            height: auto !important;
+
+            &-list {
+                display: flex;
+                flex-direction: row;
+
+                margin: 25px 0 !important;
+
+                &_sites {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    &:first-child {
+                        margin: 0 !important;
+                    }
+
+                    &_number {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        width: 100px;
+                        height: 32px;
+
+                        font-size: 32px;
+                    }
+
+                    &_text {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        width: 68px;
+                        height: 15px;
+
+                        font-size: 14px;
+                    }
+
+                }
+            }
+
+            &-img {
+                width: 193px;
+                height: 59px;
+            }
+
+            &-button {
+                width: 130px;
+                height: 40px;
+
+                margin: 0 !important;
+
+                font-size: 14px;
+
+                border-radius: 5px;
+                border: 0;
+            }
+        }
+    }
+
+    @include _600 {
+
+    }
+
+    @include _480 {
+
+    }
+
+    @include _350 {
+
+    }
+
     &__bot {
         display: flex;
         align-items: center;

@@ -64,7 +64,147 @@ function exit() {
 </script>
 
 <style lang="scss" scoped>
+@import "../../../../public/sass/media_mixin.scss";
+
 .header {
+    @include _1700 {
+
+    }
+
+    @include _1570 {
+
+    }
+
+    @include _1250 {
+
+    }
+
+    @include _1170 {
+        &__top {
+            height: 40px;
+
+            &-list {
+                display: flex;
+                align-items: center;
+
+                &_link {
+                    display: flex;
+
+                    font-size: 16px;
+                    line-height: 22px;
+
+                    margin: 0 26px 0;
+
+                    &:first-child {
+                        margin: 0;
+                    }
+
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+            }
+
+            &-user {
+                display: flex;
+                align-items: center;
+
+                &_text {
+                    font-size: 16px;
+                    line-height: 22px;
+
+                    margin: 0 10px 0 0;
+                }
+
+                &_exit {
+                    font-size: 16px;
+
+                    text-decoration: none;
+                }
+            }
+
+            &-logout {
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+    }
+
+    @include _979 {
+
+    }
+
+    @include _768 {
+        &__top {
+            display: flex;
+            flex-direction: column;
+
+            height: auto !important;
+            margin: 0 0 20px;
+
+            &-list {
+                display: flex;
+                align-items: center;
+
+                &:first-child {
+                    margin: 20px 0 10px;
+                }
+
+                &_link {
+                    display: flex;
+
+                    font-size: 16px;
+                    line-height: 22px;
+
+                    margin: 0 26px 0;
+
+                    &:first-child {
+                        margin: 0;
+                    }
+
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+            }
+
+            &-user {
+                display: flex;
+                align-items: center;
+
+                &_text {
+                    font-size: 16px;
+                    line-height: 22px;
+
+                    margin: 0 10px 0 0;
+                }
+
+                &_exit {
+                    font-size: 16px;
+
+                    text-decoration: none;
+                }
+            }
+
+            &-logout {
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+    }
+
+    @include _600 {
+
+    }
+
+    @include _480 {
+
+    }
+
+    @include _350 {
+
+    }
+
     &__top {
         display: flex;
         justify-content: space-between;
